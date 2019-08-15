@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexgabor.motionplayground.databinding.MainActivityBinding
+import com.alexgabor.motionplayground.scrollableheader.ScrollableHeaderActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,6 @@ val menuItems = listOf(
     MainMenuAdapter.Item(
         title = "Scrollable Header above RecyclerView with MotionLayout",
         description = "How to scroll views at the ends of RecyclerView to make them seem like they are part of the list",
-        activity = ScrollableHeaderAboveRecyclerViewActivity::class.java
+        activity = ScrollableHeaderActivity::class.java
     )
 )
