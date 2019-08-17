@@ -1,6 +1,7 @@
 package com.alexgabor.motionplayground.scrollableheader
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +15,8 @@ class ScrollableHeaderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding =
             DataBindingUtil.setContentView<ScrollableHeaderActivityBinding>(this, R.layout.scrollable_header_activity)
+
+        binding.root.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
 
         binding.list.apply {
             layoutManager = LinearLayoutManager(context)

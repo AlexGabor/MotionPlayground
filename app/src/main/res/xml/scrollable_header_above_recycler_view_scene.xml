@@ -8,7 +8,6 @@
         <OnSwipe
             motion:onTouchUp="stop"
             motion:dragDirection="dragUp"
-            motion:touchAnchorSide="bottom"
             motion:touchAnchorId="@+id/header" />
     </Transition>
 
@@ -27,6 +26,8 @@
             android:id="@+id/header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintBottom_toTopOf="parent" />
     </ConstraintSet>
 </MotionScene>
